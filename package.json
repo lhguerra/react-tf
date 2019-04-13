@@ -1,0 +1,28 @@
+{
+  "name": "react-tf",
+  "version": "1.0.0",
+  "description": "React component lib with the game Team Fortress 2 layout for inspiration. Made with the only purpose of practicing.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lhguerra/react-tf.git"
+  },
+  "keywords": [
+    "react",
+    "ui",
+    "component",
+    "styleguide",
+    "team",
+    "fortress",
+    "tf2"
+  ],
+  "author": "Luiz Henrique Guerra",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lhguerra/react-tf/issues"
+  },
+  "homepage": "https://github.com/lhguerra/react-tf#readme"
+}
