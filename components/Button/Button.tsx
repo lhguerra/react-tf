@@ -1,5 +1,5 @@
-import * as React from "react";
+import * as styled from "styled-components";
 
-const Button = () => <button type="button">Click me</button>;
+const Button = styled.button``;
 
 export default Button;
