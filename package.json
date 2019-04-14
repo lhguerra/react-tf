@@ -28,6 +28,8 @@
   },
   "homepage": "https://github.com/lhguerra/react-tf#readme",
   "dependencies": {
+    "@types/react": "^16.8.13",
+    "@types/styled-components": "4.1.8",
     "awesome-typescript-loader": "^5.2.1",
     "styled-components": "^4.2.0"
   },
