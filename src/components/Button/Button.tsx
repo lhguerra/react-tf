@@ -1,6 +1,5 @@
 import * as React from "react";
 import styled, { createGlobalStyle } from "styled-components";
-
 import * as TF2Font from "../../assets/fonts/tf2build.ttf";
 
 const GlobalStyle = createGlobalStyle`
@@ -25,12 +24,15 @@ const StyledButton = styled.button`
 
 interface Props {
   icon?: React.ReactNode;
+  label: String;
 }
 
-const Button = ({ icon }: Props) => (
+const Button = ({ icon, label }: Props) => (
   <React.Fragment>
-    {console.log(TF2Font)}
-    <StyledButton>{icon && icon}Click Me</StyledButton>
+    <StyledButton>
+      {icon && icon}
+      {label}
+    </StyledButton>
     <GlobalStyle />
   </React.Fragment>
 );
