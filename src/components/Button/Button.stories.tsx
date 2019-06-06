@@ -3,6 +3,10 @@ import { storiesOf } from "@storybook/react";
 import Button from "./Button";
 import { IoMdSettings } from "react-icons/io";
 
-storiesOf("Button", module).add("simple button", () => (
-  <Button icon={<IoMdSettings />} label="Settings" />
-));
+storiesOf("Button", module)
+  .add("Simple button", () => (
+    <Button label="Click me" />
+  ))
+  .add("Button with icon", () => (
+    <Button icon={<IoMdSettings />} label="Settings" />
+  ))
