@@ -1,14 +1,5 @@
 import * as React from "react";
-import styled, { createGlobalStyle } from "styled-components";
-import * as TF2Font from "../../assets/fonts/tf2build.ttf";
-
-const GlobalStyle = createGlobalStyle`
-  @font-face {
-    font-family: TF2Font;
-    src: url('${TF2Font}') format('truetype');
-    font-display: fallback;
-  }
-`;
+import styled from "styled-components";
 
 const StyledButton = styled.button`
   background-color: #766b5e;
@@ -33,7 +24,6 @@ const Button = ({ icon, label }: Props) => (
       {icon && icon}
       {label}
     </StyledButton>
-    <GlobalStyle />
   </React.Fragment>
 );
 
