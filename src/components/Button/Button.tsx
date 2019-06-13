@@ -29,12 +29,10 @@ interface Props {
 }
 
 const Button = ({ icon, label }: Props) => (
-  <React.Fragment>
-    <StyledButton>
-      {icon && icon}
-      <span>{label}</span>
-    </StyledButton>
-  </React.Fragment>
+  <StyledButton>
+    {icon && icon}
+    <span>{label}</span>
+  </StyledButton>
 );
 
 export default Button;
