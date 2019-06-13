@@ -10,3 +10,6 @@ storiesOf("Button", module)
   .add("Button with icon", () => (
     <Button icon={<IoMdSettings />} label="Settings" />
   ))
+  .add("Icon button", () => (
+    <Button icon={<IoMdSettings />} />
+  ))

@@ -11,18 +11,28 @@ const StyledButton = styled.button`
   font-weight: bold;
   font-family: "TF2Font";
   cursor: pointer;
+
+  svg {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  span {
+    position: relative;
+    bottom: -2px;
+  }
 `;
 
 interface Props {
   icon?: React.ReactNode;
-  label: String;
+  label?: String;
 }
 
 const Button = ({ icon, label }: Props) => (
   <React.Fragment>
     <StyledButton>
       {icon && icon}
-      {label}
+      <span>{label}</span>
     </StyledButton>
   </React.Fragment>
 );
