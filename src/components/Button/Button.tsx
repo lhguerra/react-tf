@@ -1,7 +1,11 @@
 import * as React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-const StyledButton = styled.button`
+interface StyledProps {
+  full: Boolean;
+}
+
+const StyledButton = styled.button<StyledProps>`
   background-color: #766b5e;
   border-radius: 5px;
   color: #ece3cb;
@@ -21,6 +25,12 @@ const StyledButton = styled.button`
     position: relative;
     bottom: -2px;
   }
+
+  ${props => props.full && css`
+    span {
+      margin-left: .5em;
+    }
+  `}
 `;
 
 interface Props {
@@ -29,9 +39,9 @@ interface Props {
 }
 
 const Button = ({ icon, label }: Props) => (
-  <StyledButton>
+  <StyledButton full={!!icon && !!label}>
     {icon && icon}
-    <span>{label}</span>
+    {label && <span>{label}</span>}
   </StyledButton>
 );
 
