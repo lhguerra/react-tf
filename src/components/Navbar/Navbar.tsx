@@ -7,12 +7,10 @@ export const NavbarItem = styled.a`
   font-size: 2rem;
   display: flex;
   border-right: 1px solid #3a3530;
-  border-left: 1px solid #3a3530;
 
   &:first-child {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    border-left: none;
   }
 
   &:last-child {
