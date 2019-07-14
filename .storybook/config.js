@@ -1,7 +1,8 @@
 import * as React from "react";
 import { configure, addDecorator } from "@storybook/react";
 import * as TF2Font from "../src/assets/fonts/tf2build.ttf";
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, ThemeProvider } from "styled-components";
+import theme from '../src/theme'
 
 // automatically import all files ending in *.stories.tsx
 const req = require.context("../src/components", true, /\.stories\.tsx$/);
@@ -19,5 +20,6 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 addDecorator(s => <><GlobalStyle />{s()}</>);
+addDecorator(s => <ThemeProvider theme={theme}>{s()}</ThemeProvider>);
 
 configure(loadStories, module);

@@ -1,14 +1,16 @@
 import * as React from "react";
 import styled, { css } from "styled-components";
 
+import {color} from '../../theme'
+
 interface StyledProps {
   full: Boolean;
 }
 
 const StyledButton = styled.button<StyledProps>`
-  background-color: #766b5e;
+  background-color: ${color('sandstone')};
   border-radius: 5px;
-  color: #ece3cb;
+  color: ${color('athsSpecial')};
   border: none;
   padding: 1rem;
   font-size: 20px;

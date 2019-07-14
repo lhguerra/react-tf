@@ -1,12 +1,14 @@
 import styled from 'styled-components'
 
+import {color} from '../../theme'
+
 export const NavbarItem = styled.a`
-  background-color: #766b5e;
-  color: #ece3cb;
+  background-color: ${color('sandstone')};
+  color: ${color('athsSpecial')};
   padding: .5rem;
   font-size: 2rem;
   display: flex;
-  border-right: 1px solid #3a3530;
+  border-right: 1px solid ${color('merlin')};
 
   &:first-child {
     border-top-left-radius: 5px;
