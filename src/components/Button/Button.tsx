@@ -1,21 +1,21 @@
 import * as React from "react";
 import styled, { css } from "styled-components";
 
-import {color} from '../../theme'
+import { color, font } from "../../theme";
 
 interface StyledProps {
   full: Boolean;
 }
 
 const StyledButton = styled.button<StyledProps>`
-  background-color: ${color('sandstone')};
+  background-color: ${color("sandstone")};
   border-radius: 5px;
-  color: ${color('athsSpecial')};
+  color: ${color("athsSpecial")};
   border: none;
   padding: 1rem;
   font-size: 20px;
   font-weight: bold;
-  font-family: "TF2Font";
+  font-family: ${font("title")};
   cursor: pointer;
 
   svg {
@@ -28,11 +28,13 @@ const StyledButton = styled.button<StyledProps>`
     bottom: -2px;
   }
 
-  ${props => props.full && css`
-    span {
-      margin-left: .5em;
-    }
-  `}
+  ${props =>
+    props.full &&
+    css`
+      span {
+        margin-left: 0.5em;
+      }
+    `}
 `;
 
 interface Props {
