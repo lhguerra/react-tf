@@ -13,3 +13,6 @@ storiesOf("Button", module)
   .add("Icon button", () => (
     <Button icon={<IoMdSettings />} />
   ))
+  .add("Cta button", () => (
+    <Button label="CLick me" variation='cta' />
+  ))

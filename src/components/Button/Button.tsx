@@ -1,10 +1,12 @@
 import * as React from "react";
 import styled, { css } from "styled-components";
+import {switchProp} from 'styled-tools'
 
 import { color, font } from "../../theme";
 
 interface StyledProps {
-  full: Boolean;
+  full: boolean;
+  variation?: string;
 }
 
 const StyledButton = styled.button<StyledProps>`
@@ -35,15 +37,23 @@ const StyledButton = styled.button<StyledProps>`
         margin-left: 0.5em;
       }
     `}
+
+  ${switchProp('variation', {
+    cta: css`
+      background-color: ${color("dune")};
+      padding: .5rem 5rem;
+    `
+  })}
 `;
 
 interface Props {
   icon?: React.ReactNode;
-  label?: String;
+  label?: string;
+  variation?: string;
 }
 
-const Button = ({ icon, label }: Props) => (
-  <StyledButton full={!!icon && !!label}>
+const Button = ({ icon, label, variation }: Props) => (
+  <StyledButton full={!!icon && !!label} variation={variation}>
     {icon && icon}
     {label && <span>{label}</span>}
   </StyledButton>
