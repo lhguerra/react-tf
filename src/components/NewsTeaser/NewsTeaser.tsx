@@ -1,6 +1,8 @@
 import * as React from "react";
 import styled from "styled-components";
 
+import Button from "../Button/Button";
+
 import { color, font } from "../../theme";
 
 interface Image {
@@ -20,16 +22,19 @@ const Container = styled.article`
   background-color: ${color("pearl")};
   border-radius: 0.5rem;
   overflow: hidden;
+  text-align: center;
+  padding-bottom: .5rem;
 `;
 
 const Header = styled.header`
   background-color: ${color("copper")};
   color: ${color("athsSpecial")};
-  text-align: center;
 `;
 
 const Content = styled.main`
   padding: 1rem 1.5rem;
+  margin-bottom: 2rem;
+  text-align: left;
 `;
 
 const Title = styled.h4`
@@ -81,7 +86,7 @@ const NewsTeaser = ({ title, date, image: { src, alt }, text }: Props) => (
       </PictureWrapper>
       <Text>{text}</Text>
     </Content>
-    <a>Read More</a>
+    <Button label="Read More" variation="cta" />
   </Container>
 );
 
