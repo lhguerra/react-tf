@@ -32,7 +32,8 @@
     "@types/styled-components": "4.1.8",
     "awesome-typescript-loader": "^5.2.1",
     "react-icons": "^3.6.1",
-    "styled-components": "^4.2.0"
+    "styled-components": "^4.2.0",
+    "styled-tools": "^1.7.1"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",
